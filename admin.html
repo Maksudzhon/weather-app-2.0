@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel 🌟</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <div class="admin-container">
+        <div class="neon-border"></div>
+        
+        <h1 id="adminTitle" class="neon-text">🔐 Admin Panel</h1>
+        
+        <!-- Login Box -->
+        <div class="login-box" id="loginBox">
+            <h2 id="loginTitle" class="section-title">Login</h2>
+            <div class="input-wrapper">
+                <input type="password" id="adminPass" placeholder="Enter password">
+                <div class="input-glow"></div>
+            </div>
+            <button id="loginBtn" class="neon-button">
+                <span id="loginBtnText">Login</span>
+                <div class="button-glow"></div>
+            </button>
+            <p id="loginError" class="error-text"></p>
+        </div>
+
+        <!-- Admin Panel -->
+        <div class="panel" id="panel" style="display:none;">
+            <!-- Language Selector -->
+            <div class="lang-select">
+                <label for="langSelect">Language:</label>
+                <select id="langSelect" class="neon-select">
+                    <option value="uz">O'zbekcha</option>
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+
+            <!-- Statistics Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-label" id="userCountLabel">Total Users</div>
+                    <div class="stat-value" id="userCount">0</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🔍</div>
+                    <div class="stat-label" id="searchCountLabel">Total Searches</div>
+                    <div class="stat-value" id="searchCount">0</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-label" id="todayLabel">Today's Activity</div>
+                    <div class="stat-value" id="todayActivity">0</div>
+                </div>
+            </div>
+
+            <!-- Search History -->
+            <div class="history-section">
+                <h3 id="historyTitle">Recent Searches</h3>
+                <div id="searchHistory" class="history-list"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="refreshBtn" class="neon-button">
+                    <span id="refreshBtnText">Refresh Data</span>
+                    <div class="button-glow"></div>
+                </button>
+                
+                <button id="clearBtn" class="neon-button danger">
+                    <span id="clearBtnText">Reset All Data</span>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+
+            <!-- Logout Button -->
+            <button id="logoutBtn" class="neon-button secondary">
+                <span id="logoutBtnText">Logout</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App 🌤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <div class="app">
+        <div class="neon-border"></div>
+        
+        <header>
+            <h1 id="appTitle" class="neon-text">🌤 Weather Station</h1>
+            
+            <div class="controls">
+                <div class="input-wrapper">
+                    <input type="text" id="cityInput" placeholder="Enter city name">
+                    <div class="input-glow"></div>
+                </div>
+                
+                <div class="button-group">
+                    <button id="searchBtn" class="neon-button">
+                        <span>Search</span>
+                        <div class="button-glow"></div>
+                    </button>
+                    
+                    <select id="languageSelector" class="neon-select">
+                        <option value="uz">O'zbekcha</option>
+                        <option value="ru">Русский</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="weather" id="weather">
+                <div class="weather-placeholder">
+                    <div class="pulse-icon">🌍</div>
+                    <p id="placeholderText">Search for a city to see weather data</p>
+                </div>
+            </div>
+
+            <div class="forecast" id="forecast"></div>
+
+            <div class="feedback-section">
+                <h2 id="feedbackTitle" class="neon-text-small">Send Feedback</h2>
+                <form id="feedbackForm" action="https://formspree.io/f/mykdwnlk" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" id="userName" placeholder="Your name" required>
+                        <div class="input-glow"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" id="userEmail" placeholder="Email" required>
+                        <div class="input-glow"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" id="userMessage" placeholder="Message" rows="4" required></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+                    
+                    <button type="submit" id="feedbackBtn" class="neon-button">
+                        <span>Send</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </form>
+                <div id="feedbackStatus"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Максуджон Мукимов | Weather Station</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
